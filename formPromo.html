@@ -1,0 +1,60 @@
+<div class="p-16">
+  <h1 class="text-2xl font-bold sm:text-3xl flex flex justify-center">
+    Form Promo Dream Capture
+  </h1>
+  <form
+    action="#"
+    class="mx-auto mb-0 mt-8 max-w-md space-y-4"
+    onsubmit="sendMessageToWhatsapp()"
+  >
+    <input
+      type="text"
+      class="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm shadow-sm"
+      placeholder="Masukan nama anda"
+      id="nama"
+    />
+
+    <h3 class="text-lg font-bold text-center flex justify-items-left">
+      Pilih Paket Promo
+    </h3>
+    <!-- Radio button -->
+    <div>
+      <label
+        for="DeliveryPriority"
+        class="flex cursor-pointer justify-between gap-4 rounded-lg border border-gray-100 bg-white p-4 text-sm font-medium shadow-sm hover:border-gray-200 has-[:checked]:border-blue-500 has-[:checked]:ring-1 has-[:checked]:ring-blue-500"
+      >
+        <div>
+          <p class="text-gray-700">Promo Wisuda</p>
+          <p class="text-gray-700">Discount 10%</p>
+        </div>
+
+        <input
+          type="radio"
+          name="DeliveryOption"
+          value="Promo Wisuda 10%"
+          id="promowisuda"
+          class="size-5 border-gray-300 text-blue-500"
+        />
+      </label>
+    </div>
+
+    <!-- Radio end -->
+
+    <!-- Submit -->
+
+    <button
+      type="submit"
+      class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white w-full"
+    >
+      Saya mau Promo
+    </button>
+  </form>
+</div>
+
+<script>
+  function sendMessageToWhatsapp() {
+    const urlToWhatsapp = `https://wa.me/"numberwhat'sApp" ?text=Halo, nama saya ${nama.value}, saya mau ${promowisuda.value}`;
+
+    window.open(urlToWhatsapp, "_blank");
+  }
+</script>
